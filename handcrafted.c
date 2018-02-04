@@ -23,7 +23,7 @@ int main() {
   for(row = 0; row < HEIGHT; row++) {
     for (col = 0; col < WIDTH; col++) {
       char pixel[256];
-      sprintf(pixel, "0 %d %d ", row+col, WIDTH-row+col);
+      sprintf(pixel, "0 %d %d ", 2*(row+col), 2*(WIDTH-row+col));
       write(img, pixel, strlen(pixel));
     }
     // finish row; new line
