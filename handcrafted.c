@@ -14,7 +14,7 @@ int main() {
   int img = open("image.ppm", O_CREAT | O_WRONLY, 0644);
 
   //add header to img
-  char * header;
+  char header[256];
   sprintf(header, "P3\n%d %d\n255\n", HEIGHT, WIDTH);
   write(img, header, strlen(header));
 
